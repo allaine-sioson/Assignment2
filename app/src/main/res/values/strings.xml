@@ -5,17 +5,10 @@
     <string name="back_button">Back</string>
     <string name="list_title">Ballerina Dancers</string>
 
-    <!-- Pet List -->
-    <plurals name="years_old">
-        <item quantity="one">%d year old</item>
-        <item quantity="other">%d years old</item>
-    </plurals>
-
     <!-- Loading and Error -->
     <string name="loading_error">Loading Error</string>
     <string name="cannot_load_data">Cannot load data</string>
     <string name="loading_data">Loading Data</string>
-    <string name="fake_delay">Fake delay, 2s</string>
     <string name="retry_button_label">Retry</string>
     <string name="back">Back</string>
     <string name="about">About</string>

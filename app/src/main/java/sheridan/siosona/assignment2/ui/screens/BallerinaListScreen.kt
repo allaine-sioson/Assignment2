@@ -154,7 +154,10 @@ fun ListScreenContent(
 
 @Composable
 fun ProfileListItem(profile: Profile, onClick: () -> Unit) {
+    var expanded by remember { mutableStateOf(false) }
+
     Card(
+        onClick = { expanded = !expanded },
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.secondary
         ),
@@ -179,7 +182,15 @@ fun ProfileListItem(profile: Profile, onClick: () -> Unit) {
         ) {
             AsyncImage(
                 model = profile.photo,
-                contentDescription = "${profile.name}'s photo"
+                contentDescription = "${profile.name}'s photo",
+                modifier = Modifier.dropShadow(
+                    RectangleShape,
+                    shadow = Shadow(
+                        radius = 8.dp,
+                        spread = 4.dp,
+                        alpha = 0.25f,
+                    )
+                )
             )
 
             Column(
@@ -201,8 +212,21 @@ fun ProfileListItem(profile: Profile, onClick: () -> Unit) {
                     fontSize = 20.sp,
                     color = MaterialTheme.colorScheme.primary
                 )
+
+                if (expanded) {
+                    // show additional information when expanded
+                    Spacer(Modifier.size(5.dp))
+
+                    Text(
+                        text = "Born in ${profile.born}, joined in ${profile.yearJoined}",
+                        fontFamily = FontFamily.Serif,
+                        fontSize = 16.sp,
+                        color = MaterialTheme.colorScheme.primary
+                    )
+                }
             }
         }
     }
-
 }
+
+
