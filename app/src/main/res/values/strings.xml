@@ -3,7 +3,7 @@
 
     <!-- Navigation -->
     <string name="back_button">Back</string>
-    <string name="list_title">Pet List</string>
+    <string name="list_title">Ballerina Dancers</string>
 
     <!-- Pet List -->
     <plurals name="years_old">

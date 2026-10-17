@@ -14,6 +14,9 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.material3.TopAppBarScrollBehavior
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.unit.sp
 import sheridan.siosona.assignment2.R
 
@@ -28,7 +31,8 @@ fun ProfileDataTopAppBar(
     title = {
         Text(
             text = title,
-            fontSize = 24.sp
+            fontSize = 24.sp,
+            fontFamily = FontFamily.Serif,
         )
     },
     navigationIcon = {
@@ -37,7 +41,7 @@ fun ProfileDataTopAppBar(
                 Icon(
                     imageVector = Icons.AutoMirrored.Outlined.ArrowBack,
                     contentDescription = stringResource(R.string.back),
-                    tint = MaterialTheme.colorScheme.primary
+                    tint = MaterialTheme.colorScheme.tertiary
                 )
             }
         }
@@ -47,7 +51,7 @@ fun ProfileDataTopAppBar(
             IconButton(
                 onClick = onReloadButtonClick,
                 colors = IconButtonDefaults.iconButtonColors(
-                    contentColor = MaterialTheme.colorScheme.primary
+                    contentColor = MaterialTheme.colorScheme.tertiary
                 )
             ) {
                 Icon(
@@ -60,9 +64,9 @@ fun ProfileDataTopAppBar(
     colors = TopAppBarDefaults.topAppBarColors(
         containerColor = MaterialTheme.colorScheme.primaryContainer,
         scrolledContainerColor = MaterialTheme.colorScheme.primaryContainer,
-        navigationIconContentColor = MaterialTheme.colorScheme.primary,
-        titleContentColor = MaterialTheme.colorScheme.primary,
-        actionIconContentColor = MaterialTheme.colorScheme.primary
+        navigationIconContentColor = MaterialTheme.colorScheme.tertiary,
+        titleContentColor = MaterialTheme.colorScheme.tertiary,
+        actionIconContentColor = MaterialTheme.colorScheme.tertiary
     ),
     scrollBehavior = scrollBehavior,
 )

@@ -7,7 +7,7 @@ import sheridan.siosona.assignment2.network.ProfileDataApi
 import kotlin.String
 
 const val imageFolder: String =
-    "https://files.tetervak.com/mobile/pet-data-app/images/"
+    "https://files.tetervak.com/mobile/ballet-data-app/images/"
 
 interface ProfileDataRepository {
 
