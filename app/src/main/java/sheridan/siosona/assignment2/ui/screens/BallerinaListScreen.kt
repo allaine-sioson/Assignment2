@@ -1,6 +1,5 @@
 package sheridan.siosona.assignment2.ui.screens
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -29,10 +28,8 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.dropShadow
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.input.nestedscroll.nestedScroll
-import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
@@ -42,7 +39,6 @@ import coil.compose.AsyncImage
 import androidx.compose.ui.graphics.shadow.Shadow
 import sheridan.siosona.assignment2.R
 import sheridan.siosona.assignment2.model.Profile
-import sheridan.siosona.assignment2.ui.theme.Assignment2Theme
 
 
 @OptIn(ExperimentalMaterial3Api::class)
